@@ -1,5 +1,8 @@
 package prasinous
 
+/**
+ * See http://en.wikipedia.org/wiki/Binary_gcd
+ */
 case class BinaryGCD(u: Long, v: Long) {
   def gcd: Long = (u.abs, v.abs) match {
     case (u, v) if (u == v) || (u == 0) || (v == 0) => u | v
@@ -10,6 +13,9 @@ case class BinaryGCD(u: Long, v: Long) {
   }
 }
 
+/**
+ * See http://en.wikipedia.org/wiki/Euclidean_algorithm
+ */
 object EuclidianGCD {
   def apply(a: Long, b: Long): Long = (a.abs, b.abs) match {
     case (a, b) if b == 0 => a
