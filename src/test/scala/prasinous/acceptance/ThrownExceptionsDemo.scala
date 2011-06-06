@@ -14,7 +14,6 @@ class ThrownExceptionsDemo extends Specification with ThrownExpectations { def i
     1 must beLessThanOrEqualTo(1)
   }
 
-  // this fails as expected
+  // fails because first assumption in chain is bad
   def e2 = 1 must beGreaterThan(9999) and beLessThanOrEqualTo(1)
-
 }
